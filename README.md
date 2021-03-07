@@ -1,2 +1,2 @@
 # capstoneTest
-Pet Web Services
+Pet Web Service
