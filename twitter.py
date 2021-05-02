@@ -1,10 +1,10 @@
 import tweepy
-
+from keys import twitter
 # API Key. 문자열로 입력.
-key = 'sgq60siaDbv9v8g8jiQGlgVFt'
-s_key = 'yxaGk3SdvewwOnMFpuGMfEZkpPkLstUPUQXBPLwt4Y7cr9gnqa'
-token = '304408446-bRTf10WlHTetwJkr7TjRrEPt4nKL8Lc7qqWdIp5s'
-s_token = 'b3PFtLyoRTeMljSjwRGOZui4tjWtEO2aytnApHeSd4uUA'
+key = twitter[0]
+s_key = twitter[1]
+token = twitter[2]
+s_token = twitter[3]
 # 핸들러 생성, 개인정보 인증 요청
 auth = tweepy.OAuthHandler(key, s_key)
 
