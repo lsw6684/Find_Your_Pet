@@ -21,10 +21,10 @@ def extract_tweets():
     for num, tweet in enumerate(tweets):                # num 번호. RT포함하면 살릴거임.
         tmp = []
         if "RT" not in tweet.text:
-            tmp.append(tweet.created_at)                       # 트윗 번호, 날짜 - 한국 시간 아닌 듯..
-            tmp.append(tweet.user.profile_image_url)                 # 작성자 프로필 이미지 null
-            tmp.append(tweet.user.name)                              # 닉네임
-            tmp.append(tweet.user.screen_name)                       # 트위터 @id
-            tmp.append(tweet.text)                                   # 트윗 내용
+            tmp.append(tweet.created_at)                # 트윗 번호, 날짜 - 한국 시간 아닌 듯..
+            tmp.append(tweet.user.profile_image_url)    # 작성자 프로필 이미지 null
+            tmp.append(tweet.user.name)                 # 닉네임
+            tmp.append(tweet.user.screen_name)          # 트위터 @id
+            tmp.append(tweet.text)                      # 트윗 내용
             result.append(tmp)
     return result
