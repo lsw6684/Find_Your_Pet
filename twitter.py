@@ -13,7 +13,7 @@ auth.set_access_token(token, s_token)
 # twitter API 생성
 api = tweepy.API(auth)
 keyword = '안락사'
-tweets = api.search(keyword, count = 1) # 트윗 개수(RT는 밑 함수에서 제거)
+tweets = api.search(keyword, count = 1000) # 트윗 개수(RT는 밑 함수에서 제거)
 result = []
 def extract_tweets():
     
@@ -28,12 +28,3 @@ def extract_tweets():
             tmp.append(tweet.text)                      # 트윗 내용
             result.append(tmp)
     return result
-
-import pandas as pd
-from sklearn.model_selection import train_test_split
-import re
-
-X = []
-for i in tweets:
-    X.append(i.text)
-print(X)
