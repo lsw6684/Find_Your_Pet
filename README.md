@@ -16,7 +16,9 @@ Pet Web Service
 - `pip install matplotlib`
 - `pip install wheel` 
 - `pip install konlpy` after installations of JDK, JPype 
+- `pip install schedule` for autorun
 
 ## MongoDB
 - `pip install pymongo` for usual python practice
 - `pip install pymongo dnspython` for using Cloud Server
+- `pip install pymongo[srv]` for dnspython module
