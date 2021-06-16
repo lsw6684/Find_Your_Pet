@@ -13,7 +13,7 @@ auth.set_access_token(token, s_token)
 # twitter API 생성
 api = tweepy.API(auth)
 keyword = '안락사'
-tweets = api.search(keyword, count = 1000) # 트윗 개수(RT는 밑 함수에서 제거)
+tweets = api.search(keyword, count = 20000 ) # 트윗 개수(RT는 밑 함수에서 제거)
 result = []
 def extract_tweets():
     
