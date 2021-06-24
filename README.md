@@ -1,4 +1,4 @@
-# capstoneTest
+# Find Your Pet
 Pet Web Service
 - [Data processing](#data-processing)
 
@@ -22,3 +22,6 @@ Pet Web Service
 - `pip install pymongo` for usual python practice
 - `pip install pymongo dnspython` for using Cloud Server
 - `pip install pymongo[srv]` for dnspython module
+
+## Scheduler
+- `pip install schedule` for scheduling
