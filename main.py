@@ -1,12 +1,13 @@
 from pymongo import MongoClient
-from twitter import extract_tweets
+#from twitter import extract_tweets
 from openAPI import extract_info
 from keys import s_MongoDB
 import schedule
 import time
 
+
 # URL로 호스트, 포트 지정
-cluster = 'mongodb+srv://FYP:{}@cluster0.jzw1i.mongodb.net/test?retryWrites=true&w=majority'.format(s_MongoDB)
+cluster = 'mongodb+srv://FindYourPet:{}@cluster0.ulybj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'.format(s_MongoDB)
 # collection 지정
 client = MongoClient(cluster)
 
@@ -28,11 +29,7 @@ def store_infos():
             }
         )
 # 00시 01분 : 전날 데이터 업데이트
-schedule.every().day.at("0:1").do(store_infos)
+schedule.every().day.at("00:01").do(store_infos)
 while True:                 # 무한 루프로 스케줄 유지
 	schedule.run_pending() 
 	time.sleep(1) 
-
-#print(extract_tweets())
-#print("●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●")
-#print(extract_info()) 
